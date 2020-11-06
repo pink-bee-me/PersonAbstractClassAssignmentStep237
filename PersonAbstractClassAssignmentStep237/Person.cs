@@ -1,20 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Services;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace PersonAbstractClassAssignmentStep237
 {
-   public abstract class Person
+   public abstract class Person : IGetPersonalInfo
     {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
 
-        public virtual void SayName()
+
+        public abstract void GetName();
+        
+        
+
+        public virtual void SayName(string firstName, string lastName)
         {
-            string fullName = FirstName + " " + LastName;
-            Console.WriteLine("Name of Person Added To System: " + fullName);
+          var fullName = firstName + " " + lastName;
+            Console.WriteLine(fullName);
         }
     }
 }

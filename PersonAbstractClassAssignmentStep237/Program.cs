@@ -16,6 +16,17 @@ namespace PersonAbstractClassAssignmentStep237
             employee.SayName();
             Console.ReadLine();
 
+
+
+            Employee.GetName();
+            Employee.SayName(firstName, lastName);
+            var employee2 = new Employee();
+            employee2.GetName();
+            employee2.SayName(employee2.FirstName, employee2.LastName);
+            employee2.Quit(employee2);
+
+
+
         }
     }
 }
